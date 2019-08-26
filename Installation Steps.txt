@@ -1,0 +1,37 @@
+Using Command Line:
+------------------------------
+
+Step-1: set the path in envirnment variables
+
+C:\Users\t-Ravindra1\AppData\Roaming\npm
+
+Step-2: chech the version of software
+
+node -v
+
+step-3:check the npm version
+
+npm -v
+
+Step-4: To install angular 6
+
+npm install -g @angular/cli
+
+Step-5: Create project (Project name: Angular6App (any name))
+
+ng new Angular6App
+
+Step-6: Download Visual Studio
+
+ https://code.visualstudio.com/
+
+Step-7:Open project in Visual Studio (from your location: c:C:\Users\t-Ravindra1)
+
+Step-8: Compile our project (C:\Users\t-Ravindra1\Angular6App>)
+
+ng serve
+
+Step-9:See the output
+
+http://localhost:4200/ 
+ 
