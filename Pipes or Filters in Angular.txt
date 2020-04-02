@@ -1,0 +1,14 @@
+Pipes: (Filters)
+
+1.	Lowercase
+2.	Uppercase
+3.	Date		(date:'d/M/y')
+4.	Currency		(currency:"USD")
+5.	Json
+6.	Percent
+7.	Decimal		(number: '3.4' )
+8.	Slice		(slice:2:4)   (Ex: state=["AP","TS","MH","KA","DL"];)
+
+
+Ex: {{ propetyname |pipe}}
+

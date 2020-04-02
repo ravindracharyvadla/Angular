@@ -1,0 +1,44 @@
+Steps for creating Reactive Forms in Angular:
+
+step-1: Register and import the reactive form in app.module.ts
+
+Module Name: ReactiveFormsModule from @angular/forms
+
+import { ReactiveFormsModule } from '@angular/forms';
+
+imports: [
+        ReactiveFormsModule,
+    ],
+
+
+Step-2: Generate New Component using the following command
+
+ng generate component LoginForm
+
+Step-3: import FormControl from '@angular/forms'
+
+import { FormControl } from '@angular/forms'
+
+and 
+
+Write the Login code in class:
+
+username=new FormControl('');
+password=new FormControl('');
+
+Step-4: Write the html code for Login in login-form.component.html file
+
+[formControl]="username" in <input> tag
+
+
+Step-5: Call the login-form.component.html from app.component.html using the following tag
+
+<app-login-form></app-login-form>
+
+Step-6: Compile the application using the following command
+
+ng serve
+
+Stpe-7: Run the application on server using localhost
+
+http://localhost:4200

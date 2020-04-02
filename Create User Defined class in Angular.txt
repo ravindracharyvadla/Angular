@@ -1,0 +1,65 @@
+Create User Defined class and object in Angular:
+
+Step-1: C:\Users\ravichinni86\Angular6App>ng generate class Employee
+
+CREATE src/app/employee.spec.ts (162 bytes)
+CREATE src/app/employee.ts (26 bytes)
+
+Step-2: C:\Users\ravichinni86\Angular6App\src\app\employee.ts
+
+export class Employee {
+
+    employeeId:number;
+    employeeName:string;
+    salary:number;
+
+    constructor(employeeId:number,employeeName:string,salary:number){
+        this.employeeId=employeeId;
+        this.employeeName=employeeName;
+        this.salary=salary;
+    }
+
+}
+
+step-3:  C:\Users\ravichinni86\Angular6App\src\app\app.component.ts
+
+import { Component } from '@angular/core';
+import { Employee } from './employee';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+
+export class AppComponent {
+  
+   empObject=new Employee(1020,"James",25000.00);
+   
+}
+
+
+Step-4: C:\Users\ravichinni86\Angular6App\src\app\app.component.html
+
+<html>
+<head></head>
+<body>
+<h2>Employee Details</h2>
+
+  Employee Id: {{empObject.employeeId}} <br>
+  Employee Id: {{empObject.employeeName}} <br>
+  Employee Id: {{empObject.salary}} <br>
+
+</body>
+
+</html>
+
+Step-5: Compile
+
+C:\Users\ravichinni86\Angular6App>ng serve
+
+Step-6: Run
+
+http://localhost:4200/
+
+

@@ -1,0 +1,45 @@
+Angular Reactive Forms:
+
+step-1: Register the reactive forms module in app.module.ts file
+
+import { ReactiveFormsModule } from '@angular/forms';  
+
+Add in imports 
+
+imports: [  
+   	 
+	ReactiveFormsModule  
+ 	],  
+})  
+
+
+step-2: Generate new component
+
+ng generate component RegistrationForm  
+
+step-3: Import  FormControl from @angular/forms in registration-form.component.ts
+
+import { FormControl } from '@angular/forms';  
+
+and 
+
+write the following code in class:
+
+username = new FormControl(''); 
+
+step-4: Write the following code in registration-form.component.html
+
+User Name:  <input type="text" [formControl]="username"> 
+
+step-5: Write the following tag in app.component.html
+
+ <app-registration-form></app-registration-form>  
+
+step-6: compile the application using following command
+
+ng serve
+
+step-7: Run the application on browser using following url
+
+http://localhost:4200/
+

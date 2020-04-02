@@ -1,0 +1,14 @@
+Dropdown Box using Array in Agular
+
+
+TypeScript:
+  
+department = ["Java", ".Net", "Testing"];
+
+
+HTMl code:
+
+<select>
+       <option *ngFor = "let dept of department">{{dept}}</option>
+    </select>
+ 

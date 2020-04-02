@@ -1,0 +1,43 @@
+Forms:
+
+Angular forms are used to handle user's input.
+
+Types:
+
+	1. Reactive forms
+	2. Template-driven forms
+
+
+1. Reactive Forms:
+	Reactive forms are more robust.
+	Reactive forms are more scalable, reusable, and testable.
+
+	Example:
+
+	import { FormControl } from '@angular/forms';  
+	@Component({  
+  		
+  		template: '
+    		color: <input type="text" [formControl]="colorObject">  '
+	})  
+	export class ColorComponent {  
+  		colorObject = new FormControl('');  
+	}  
+
+2. Template-driven forms:
+
+	Template-driven forms are best if you want to add a simple form to your application like email list signup form.
+
+	Example: 
+	
+	@Component({  
+ 	 
+  	template: `  
+    		color: <input type="text" [(ngModel)]="colorobject "> `  
+	})  
+	export class ColorComponent {  
+  		colorobject = '';  
+	}  
+
+
+

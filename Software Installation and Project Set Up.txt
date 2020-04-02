@@ -1,0 +1,21 @@
+Software Installation and Project Set Up:
+Using Command Line:
+•	Downloas Node Js
+o	https://nodejs.org/en/download/
+•	Step-1: set the path in envirnment variables
+o	C:\Users\t-Ravindra1\AppData\Roaming\npm
+•	Step-2: chech the version of software
+o	node -v
+•	step-3:check the npm version
+o	npm -v
+•	Step-4: To install angular 6
+o	npm install -g @angular/cli
+•	Step-5: Create project (Project name: Angular6App (any name))
+o	ng new Angular6App
+•	Step-6: Download Visual Studio
+o	https://code.visualstudio.com/
+•	Step-7:Open project in Visual Studio (from your location: c:C:\Users\t-Ravindra1)
+•	Step-8: Compile our project (C:\Users\t-Ravindra1\Angular6App>)
+o	ng serve
+•	Step-9:See the output (Run on web browser)
+o	http://localhost:4200/ 

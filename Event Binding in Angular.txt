@@ -1,0 +1,24 @@
+Topic: Event Binding
+
+Typescript code:
+
+department= ["Java", ".Net", "Testing"];
+
+  myFunction(event: any) { 
+    
+    alert("Data has been successfully submited");
+    console.log(event);
+  }
+
+
+
+
+HTML Code:
+
+<select>
+      <option *ngFor = "let dept of department">{{dept }}</option>
+   </select>
+
+  <button (click)="myFunction($event)">submit</button>
+
+

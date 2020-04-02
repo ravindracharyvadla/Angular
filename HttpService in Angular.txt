@@ -1,0 +1,62 @@
+Http Service:
+-----------------------------------------
+
+Http Service will help us fetch external data, post to it, etc. 
+
+Difference between HttpClient and Http:
+
+	The HttpClient is used to perform HTTP requests and it imported form @angular/common/http.
+	The HttpClient is more modern and easy to use the alternative of HTTP.
+	HttpClient is an improved replacement for Http. 
+	They expect to deprecate Http in Angular 5 and remove it in a later version.
+	HttpClient is a new API that came with 4.3.
+	It has updated API's with support for progress events, json deserialization by default.
+	Http is the older API and will eventually be deprecated.
+
+
+Step-1: import HttpModule  in app.module.ts file
+
+import { HttpModule } from '@angular/http';
+
+imports: [
+      HttpModule,
+   ],
+
+Step-2: http service in the app.component.ts file and Write the code in AppComponent class in app.component.ts file
+
+import { Http } from '@angular/http';
+import { map} from 'rxjs/operators';
+
+
+
+export class AppComponent {
+
+   	result:any:
+   	constructor(private http: Http) {
+   	}
+
+  
+   ngOnInit() {
+  	this.http.get("http://jsonplaceholder.typicode.com/users").pipe(map((response) => response.json()))
+	.subscribe((x) => 	this.show(x));     
+   }
+   show(x) {
+	this.result = x;
+    }
+}
+
+Step-3: The data is displayed in the browser, which is done in the app.component.html file.
+
+<ul *ngFor = "let x of result">
+   <li>Name : {{x.id}}</li>
+</ul>
+
+Step-4: Compile the following command
+
+ng serve
+
+Step-5: Run the application using the following url
+
+http://localhost:4200
+
+

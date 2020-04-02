@@ -1,0 +1,19 @@
+if..else in Angular using ng-template:
+
+TypeScript Code:
+
+export class AppComponent {
+ 
+  department = ["Java", ".Net", "Testing"];
+
+  variable = true;   
+}
+
+
+
+HTML Code:
+
+<span *ngIf = "variable; then condition1 else condition2"></span>
+
+<ng-template #condition1>Condition is valid</ng-template>
+<ng-template #condition2>Condition is invalid</ng-template>

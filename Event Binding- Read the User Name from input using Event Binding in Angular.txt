@@ -1,0 +1,22 @@
+Event Binding- Read the User Name from input using Event Binding:
+
+
+TypeScript Code:
+ 
+  userName = ''; 
+ 
+  myFunctionUserName(event: Event) {  
+    
+    this.userName = (<HTMLInputElement>event.target).value;
+
+  }  
+
+
+
+HTML Code:
+
+ Enter User Name: <input type="text"  (input)="myFunctionUserName($event)">  
+ <p>{{userName}}</p> 
+
+
+

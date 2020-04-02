@@ -1,0 +1,47 @@
+Steps for creating Routing Application using Angular:
+
+step-1:Create a link in app.component.html
+
+Example: <a routerLink="add">Add Employee</a>
+
+step-2: Create component app.module.ts
+
+command name: ng g c employee/addEmployee - -spec=false - -flat=true
+
+step-3: Import router module in app.module.ts
+
+Example: import {RouterModule} from '@angular/router';
+
+step-4: Write the path andcomponent name in app.module.ts
+
+Example:  RouterModule.forRoot([
+	{
+	path: 'add',
+	component: AddEmployeeComponent
+	}
+])
+
+step-5: Write the Typescript code in add-employee.component.ts
+
+Example:
+
+employeeId=1020;
+  employeeName="Tilak";
+  salary=25000.00;
+
+
+step-6: Write html code for output in add-employee.component.html
+
+Example:
+
+Employee Id: {{employeeId}} <br>
+Employee Name: {{employeeName}} <br>
+Employee salary: {{salary}} <br>
+
+step-7: compile using ng serve
+
+step-6: Run the application
+
+http://localhost:4200/
+
+
